@@ -14,9 +14,7 @@ import java.util.stream.Collectors;
 public class TaskLogicService implements TaskLogic {
     Parser parser = new ParserService();
     /*
-    Take all sentences.
-    Sort and return sorted collection.
-    Recover full text.
+    Should sort messages
      */
     @Override
     public List<String> doTaskLogic(Text text) {
