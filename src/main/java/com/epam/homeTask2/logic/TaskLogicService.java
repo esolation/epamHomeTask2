@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
 public class TaskLogicService implements TaskLogic {
     Parser parser = new ParserService();
     /*
-    Should sort messages
+    Should sort sentences
      */
     @Override
     public List<String> doTaskLogic(Text text) {
