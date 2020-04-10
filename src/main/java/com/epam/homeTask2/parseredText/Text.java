@@ -12,12 +12,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Text {
-    Logger log = Logger.getLogger(Text.class);
-    Parser parser = new ParserService();
-    String text;
-    StringBuilder recoveredText = new StringBuilder();
-    List<Recoverable> recov = new ArrayList<>();
-    List<Paragraphs> paragraphs = new ArrayList<>() ;
+     private Logger log = Logger.getLogger(Text.class);
+     private Parser parser = new ParserService();
+     private String text;
+     private StringBuilder recoveredText = new StringBuilder();
+     private List<Recoverable> recov = new ArrayList<>();
+     private List<Paragraphs> paragraphs = new ArrayList<>() ;
     public Text(String text) {
         try{
             BasicConfigurator.configure();
@@ -35,7 +35,7 @@ public class Text {
         return paragraphs;
     }
 
-    public void setParagraphs() throws NullPointerException {
+    private void setParagraphs() throws NullPointerException {
         for (String paragraph : parser.getAllParagraphsFromText(text)) {
             paragraphs.add(new Paragraphs(paragraph));
         }

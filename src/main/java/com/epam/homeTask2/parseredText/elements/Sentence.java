@@ -7,11 +7,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Sentence implements Recoverable {
-    Parser parser = new ParserService();
+    private Parser parser = new ParserService();
     private String sentence;
     private List<Words> words = new ArrayList<>();
 
-    public Sentence(String text) {
+     Sentence(String text) {
         this.sentence = text;
         setWords();
     }
@@ -28,7 +28,7 @@ public class Sentence implements Recoverable {
         return words;
     }
 
-    public void setWords() {
+    private void setWords() {
         for (String word : parser.getAllWordsFromSentences(sentence)) {
             words.add(new Words(word));
         }

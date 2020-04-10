@@ -1,9 +1,9 @@
 package com.epam.homeTask2.parseredText.elements;
 
 public class Chars implements Recoverable {
-    char c;
+    private char c;
 
-    public Chars(char c) {
+     Chars(char c) {
         this.c = c;
     }
     @Override
